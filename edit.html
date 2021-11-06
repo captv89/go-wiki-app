@@ -1,0 +1,30 @@
+<h1> Editing {{.Title}}</h1>
+
+
+<form action="/save/{{.Title}}" method="POST" role="form">
+    <legend>Edit Text and click <i>Submit</i> to save.</legend>
+
+    <div class="text-area">
+        <textarea name="body" id="inputbody" rows="3" required="required">{{printf "%s" .Body}}</textarea>
+    </div>
+
+    <div>
+        <button type="submit" class="btn" value="Save">Submit</button>
+    </div>
+
+</form>
+
+<style>
+    #inputbody {
+        width: 500px;
+        height: 200px;
+    }
+    .text-area {
+        margin-bottom: 10px;
+    }
+    *{
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+</style>
