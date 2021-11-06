@@ -1,0 +1,9 @@
+<h1>List of Documents</h1>
+
+<div>
+  <ul>
+    Wiki: {{range .}}
+    <li><a href="/view/{{.}}">{{.}}</a></li>
+    {{end}}
+  </ul>
+</div>
